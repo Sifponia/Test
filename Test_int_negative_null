@@ -1,0 +1,46 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class Test {
+    public static void main(String[] args) {
+
+
+        
+
+
+        Integer item []= {1,2,-1,-2,null,null,8,null,-4,5};//Lista de usaurio
+
+        //Atributos acumulativos +1
+        Integer entero = 0;
+        Integer negativo = 0;
+        Integer nulo = 0;
+
+        //Lista donde de añaden los datos del usuario
+        List<Integer> list1 = Arrays.asList(item);
+
+        //Iteraciones de la lista
+        for (Integer i : list1) {
+
+            //Comprobacion mediante un if (Entra si cumple con los valores)
+            if (i ==null) {
+                nulo++;
+
+            } else if (i >= 1) {
+
+                entero++;
+
+            } else {
+                negativo++;
+
+            }
+
+
+        }
+
+        //Imprimir por pantalla los resultados
+        System.out.println("Hay numero negativos = " + negativo);
+        System.out.println("Hay numero enteros = " + entero);
+        System.out.println("Hay numero nulos = " + nulo);
+
+    }
+}
